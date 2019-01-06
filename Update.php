@@ -1,16 +1,22 @@
 <?php
     include_once'Connect.php';
-
+    
     $id=$_REQUEST['id'];
 
-    $queryup=("SELECT * FROM `test1` WHERE id=$id");
+    if($id==0){
+        include_once'Display.php';
+    }
 
-    $resultup=mysqli_query($connect,$queryup);
+    else{
+        $queryup=("SELECT * FROM `test1` WHERE id=$id");
+
+        $resultup=mysqli_query($connect,$queryup);
    
-    while($rowup=mysqli_fetch_assoc($resultup)){
-        $usernameup= $rowup['username'];
-        $passwordup= $rowup['password'];
-    
+        while($rowup=mysqli_fetch_assoc($resultup)){
+            $usernameup= $rowup['username'];
+            $passwordup= $rowup['password'];
+        
+        }
     }
 
 ?>
