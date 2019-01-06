@@ -1,10 +1,10 @@
 <?php
-include_once('Connect.php');
-$id=$_REQUEST['id'];
+    include_once('Connect.php');
+    $id=$_REQUEST['id'];
 
-$query=("DELETE FROM `test1` WHERE id=$id");
-mysqli_query($connect,$query);
+    $query=("DELETE FROM `test1` WHERE id=$id");
+    mysqli_query($connect,$query);
 
-header('location:Display.php');
+    header('location:Display.php');
 
 ?>
